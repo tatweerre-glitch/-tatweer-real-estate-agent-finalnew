@@ -1,0 +1,114 @@
+{
+  "units": [
+    {
+      "id": "RYD-APT-101",
+      "title_en": "2BR Apartment for Rent — Al Narjis",
+      "title_ar": "شقة 2 غرف للإيجار — النرجس",
+      "listing_type": "rent",
+      "property_type": "apartment",
+      "city": "Riyadh",
+      "district_en": "Al Narjis",
+      "district_ar": "النرجس",
+      "project_id": "al-narjis",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqm": 120,
+      "price_sar": 4500,
+      "price_label_en": "SAR 4,500 / month",
+      "price_label_ar": "4,500 ر.س / شهرياً",
+      "photos": [
+        "https://picsum.photos/seed/ryd-apt-101-a/800/600",
+        "https://picsum.photos/seed/ryd-apt-101-b/800/600"
+      ],
+      "available": true
+    },
+    {
+      "id": "RYD-VIL-204",
+      "title_en": "4BR Villa for Sale — Al Narjis",
+      "title_ar": "فilla 4 غرف للبيع — النرجس",
+      "listing_type": "sale",
+      "property_type": "villa",
+      "city": "Riyadh",
+      "district_en": "Al Narjis",
+      "district_ar": "النرجس",
+      "project_id": "al-narjis",
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "area_sqm": 380,
+      "price_sar": 2850000,
+      "price_label_en": "SAR 2,850,000",
+      "price_label_ar": "2,850,000 ر.س",
+      "photos": [
+        "https://picsum.photos/seed/ryd-vil-204-a/800/600",
+        "https://picsum.photos/seed/ryd-vil-204-b/800/600",
+        "https://picsum.photos/seed/ryd-vil-204-c/800/600"
+      ],
+      "available": true
+    },
+    {
+      "id": "RYD-DUP-305",
+      "title_en": "3BR Duplex for Rent — Al Yasmin",
+      "title_ar": "دوبlex 3 غرف للإيجار — الياسمين",
+      "listing_type": "rent",
+      "property_type": "duplex",
+      "city": "Riyadh",
+      "district_en": "Al Yasmin",
+      "district_ar": "الياسمين",
+      "project_id": "al-yasmin",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area_sqm": 210,
+      "price_sar": 7200,
+      "price_label_en": "SAR 7,200 / month",
+      "price_label_ar": "7,200 ر.س / شهرياً",
+      "photos": [
+        "https://picsum.photos/seed/ryd-dup-305-a/800/600",
+        "https://picsum.photos/seed/ryd-dup-305-b/800/600"
+      ],
+      "available": true
+    },
+    {
+      "id": "JED-APT-502",
+      "title_en": "2BR Apartment for Sale — Waterfront District",
+      "title_ar": "شقة 2 غرف للبيع — الواجهة البحرية",
+      "listing_type": "sale",
+      "property_type": "apartment",
+      "city": "Jeddah",
+      "district_en": "Waterfront District",
+      "district_ar": "الواجهة البحرية",
+      "project_id": "waterfront-district",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area_sqm": 135,
+      "price_sar": 980000,
+      "price_label_en": "SAR 980,000",
+      "price_label_ar": "980,000 ر.س",
+      "photos": [
+        "https://picsum.photos/seed/jed-apt-502-a/800/600",
+        "https://picsum.photos/seed/jed-apt-502-b/800/600"
+      ],
+      "available": true
+    },
+    {
+      "id": "JED-APT-601",
+      "title_en": "1BR Apartment for Rent — Waterfront District",
+      "title_ar": "شقة غرفة للإيجار — الواجهة البحرية",
+      "listing_type": "rent",
+      "property_type": "apartment",
+      "city": "Jeddah",
+      "district_en": "Waterfront District",
+      "district_ar": "الواجهة البحرية",
+      "project_id": "waterfront-district",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area_sqm": 78,
+      "price_sar": 3800,
+      "price_label_en": "SAR 3,800 / month",
+      "price_label_ar": "3,800 ر.س / شهرياً",
+      "photos": [
+        "https://picsum.photos/seed/jed-apt-601-a/800/600"
+      ],
+      "available": true
+    }
+  ]
+}

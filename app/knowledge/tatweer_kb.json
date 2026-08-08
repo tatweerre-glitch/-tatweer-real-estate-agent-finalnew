@@ -1,0 +1,110 @@
+{
+  "company": {
+    "name_en": "Tatweer Real Estate",
+    "name_ar": "تطوير العقارية",
+    "tagline_en": "Building communities, shaping futures",
+    "tagline_ar": "نبني المجتمعات ونشكل المستقبل",
+    "website": "https://www.tatweer.sa",
+    "phone": "+966 11 000 0000",
+    "email": "info@tatweer.sa",
+    "hours_en": "Sunday to Thursday, 9:00 AM – 6:00 PM (AST)",
+    "hours_ar": "الأحد إلى الخميس، 9:00 صباحاً – 6:00 مساءً"
+  },
+  "projects": [
+    {
+      "id": "al-narjis",
+      "name_en": "Al Narjis",
+      "name_ar": "النرجس",
+      "city": "Riyadh",
+      "type": "residential",
+      "units": ["villas", "townhouses", "apartments"],
+      "status": "available",
+      "highlights_en": [
+        "Gated community with parks and retail",
+        "Flexible payment plans up to 5 years",
+        "Near schools and major road networks"
+      ],
+      "highlights_ar": [
+        "مجتمع مسور مع حدائق ومرافق تجارية",
+        "خطط سداد مرنة حتى 5 سنوات",
+        "قريب من المدارس والطرق الرئيسية"
+      ]
+    },
+    {
+      "id": "al-yasmin",
+      "name_en": "Al Yasmin",
+      "name_ar": "الياسمين",
+      "city": "Riyadh",
+      "type": "residential",
+      "units": ["apartments", "duplexes"],
+      "status": "limited",
+      "highlights_en": [
+        "Modern apartments with smart home options",
+        "Clubhouse, gym, and swimming pool",
+        "10% down payment plans available"
+      ],
+      "highlights_ar": [
+        "شقق حديثة مع خيارات المنزل الذكي",
+        "نادي اجتماعي وصالة رياضية ومسبح",
+        "خطط متاحة بدفعة أولى 10%"
+      ]
+    },
+    {
+      "id": "waterfront-district",
+      "name_en": "Waterfront District",
+      "name_ar": "الواجهة البحرية",
+      "city": "Jeddah",
+      "type": "mixed-use",
+      "units": ["apartments", "retail", "offices"],
+      "status": "coming_soon",
+      "highlights_en": [
+        "Waterfront lifestyle with promenade",
+        "Mixed residential and commercial units",
+        "Pre-registration open for early buyers"
+      ],
+      "highlights_ar": [
+        "أسلوب حياة على الواجهة البحرية",
+        "وحدات سكنية وتجارية متنوعة",
+        "التسجيل المسبق مفتوح للمشترين الأوائل"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "topics": ["payment", "installment", "down payment", "سداد", "دفعة"],
+      "answer_en": "Tatweer offers flexible payment plans including 10–30% down payment with installments up to 5 years, subject to project and unit availability. Our sales team can prepare a personalized plan during your visit.",
+      "answer_ar": "توفر تطوير خطط سداد مرنة تشمل دفعة أولى من 10–30% مع أقساط حتى 5 سنوات حسب توفر المشروع والوحدة. يمكن لفريق المبيعات إعداد خطة مخصصة لك أثناء زيارتك."
+    },
+    {
+      "topics": ["viewing", "visit", "tour", "appointment", "زيارة", "معاينة"],
+      "answer_en": "You can book a site visit through this chat, by calling our sales line, or via our website. Viewings are available Sunday–Thursday; weekend visits may be arranged for selected projects.",
+      "answer_ar": "يمكنك حجز زيارة للموقع عبر هذه المحادثة أو بالاتصال بخط المبيعات أو عبر موقعنا. الزيارات متاحة من الأحد إلى الخميس، وقد تُرتب زيارات نهاية الأسبوع لمشاريع مختارة."
+    },
+    {
+      "topics": ["warranty", "maintenance", "defect", "ضمان", "صيانة"],
+      "answer_en": "Structural warranty and after-sales maintenance follow Saudi building standards and Tatweer project-specific policies. Share your unit number and purchase date so we can route you to the right team.",
+      "answer_ar": "يغطي الضمان الإنشائي والصيانة ما بعد البيع وفق المعايير السعودية وسياسات مشروع تطوير. شاركنا رقم الوحدة وتاريخ الشراء لتوجيهك للفريق المناسب."
+    },
+    {
+      "topics": ["financing", "bank", "mortgage", "تمويل", "رهن"],
+      "answer_en": "We work with approved Saudi banks for home financing. Bring your salary certificate and ID to a sales center and we will help you compare eligible mortgage options.",
+      "answer_ar": "نتعاون مع بنوك سعودية معتمدة لتمويل المسكن. أحضر تعريف الراتب وهويتك إلى مركز المبيعات وسنساعدك في مقارنة خيارات التمويل المتاحة."
+    },
+    {
+      "topics": ["handover", "delivery", "move in", "تسليم", "استلام"],
+      "answer_en": "Handover timelines depend on project phase and your unit. We notify buyers by SMS and email when keys are ready. You can ask here for an update if you already have a reservation.",
+      "answer_ar": "يعتمد موعد التسليم على مرحلة المشروع ووحدتك. نُبلغ المشترين برسالة نصية وبريد إلكتروني عند جاهزية المفاتيح. يمكنك السؤال هنا للاستفسار عن حالة حجزك."
+    },
+    {
+      "topics": ["contact", "phone", "email", "hours", "تواصل", "ساعات"],
+      "answer_en": "Reach Tatweer at +966 11 000 0000 or info@tatweer.sa. Sales centers are open Sunday–Thursday, 9 AM–6 PM AST.",
+      "answer_ar": "تواصل مع تطوير على +966 11 000 0000 أو info@tatweer.sa. مراكز المبيعات مفتوحة من الأحد إلى الخميس 9 ص–6 م بتوقيت السعودية."
+    }
+  ],
+  "intents": {
+    "greeting_en": "Hello! I'm the Tatweer Real Estate assistant. I can help with projects, payment plans, site visits, and after-sales support. How can I help you today?",
+    "greeting_ar": "مرحباً! أنا مساعد تطوير العقارية. يمكنني مساعدتك في المشاريع وخطط السداد وزيارات المواقع وخدمة ما بعد البيع. كيف يمكنني مساعدتك اليوم؟",
+    "fallback_en": "I'm not fully sure about that detail. I can connect you with a Tatweer sales advisor at +966 11 000 0000, or you can share your name and phone number and we'll call you back.",
+    "fallback_ar": "لست متأكداً تماماً من هذه التفاصيل. يمكنني توصيلك بمستشار مبيعات تطوير على +966 11 000 0000، أو شاركني اسمك ورقم جوالك وسنعاود الاتصال بك."
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatweer Real Estate | Customer Assistant</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">T</div>
+          <div>
+            <h1>Tatweer Real Estate</h1>
+            <p>تطوير العقارية</p>
+          </div>
+        </div>
+        <p class="tagline">Your guide to projects, payment plans, and site visits.</p>
+        <div class="quick-actions">
+          <button type="button" data-prompt="Apartments for rent in Riyadh">
+            Rent in Riyadh
+          </button>
+          <button type="button" data-prompt="Show photos for RYD-APT-101">
+            Unit photos
+          </button>
+          <button type="button" data-prompt="Book appointment for RYD-VIL-204">
+            Book viewing
+          </button>
+          <button type="button" data-prompt="شقق للإيجار في جدة">
+            إيجار جدة
+          </button>
+        </div>
+        <footer class="sidebar-footer">
+          <span id="status-dot" class="status-dot"></span>
+          <span id="status-text">Connecting...</span>
+        </footer>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="chat-header">
+          <h2>Customer Assistant</h2>
+          <p>Ask about listings, financing, handover, or schedule a viewing.</p>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+
+        <form id="chat-form" class="composer">
+          <textarea
+            id="message-input"
+            rows="1"
+            placeholder="Type your question..."
+            aria-label="Message"
+          ></textarea>
+          <button type="submit" id="send-btn">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
