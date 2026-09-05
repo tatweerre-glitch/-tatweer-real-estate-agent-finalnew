@@ -79,11 +79,99 @@ def _detect_city(message: str) -> str | None:
 
 
 def _detect_bedrooms(message: str) -> int | None:
+    text = _normalize(message)
+
+    # Arabic bedroom expressions
+    arabic_numbers = {
+        "غرفة": 1,
+        "غرفة واحدة": 1,
+        "غرفتين": 2,
+        "غرفتان": 2,
+        "ثلاث غرف": 3,
+        "ثلاثة غرف": 3,
+        "أربع غرف": 4,
+        "أربعة غرف": 4,
+        "خمس غرف": 5,
+        "خمسة غرف": 5,
+    }
+
+    for phrase, count in arabic_numbers.items():
+        if phrase in text:
+            return count
+
+    # Arabic digits: ١، ٢، ٣...
+    arabic_digit_match = re.search(
+        r"([0-9]+)\s*(?:غرف|غرفة|غرفه)",
+        text,
+    )
+    if arabic_digit_match:
+        arabic_digits = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+        return int(arabic_digit_match.group(1).translate(arabic_digits))
+
+    # English / normal numeric format
+    match = re.search(
+        r"(\d+)\s*(?:br|bed|bedroom|bedrooms|غرف|غرفة|غرفه)",
+        text,
+    )
+
+    if match:
+        return int(match.group(1))
+
+    normalized = _normalize(message)
+
+    # الأرقام: 2 غرف، 2 غرفة، 2 bedroom، 2 bedrooms، 2 br
+    match = re.search(
+        r"(\d+)\s*(?:br|bed|bedroom|غرف|غرفة|غرفه|غرفتين|غرفتان)",
+        normalized
+    )
+    if match:
+        return int(match.group(1))
+
+    # الكلمات العربية
+    arabic_numbers = {
+        "غرفة واحدة": 1,
+        "غرفه واحدة": 1,
+        "غرفة": 1,
+        "غرفتين": 2,
+        "غرفتان": 2,
+        "ثلاث غرف": 3,
+        "ثلاثة غرف": 3,
+        "اربع غرف": 4,
+        "أربع غرف": 4,
+        "أربعة غرف": 4,
+        "خمس غرف": 5,
+        "خمسة غرف": 5,
+    }
+
+    for phrase, bedrooms in arabic_numbers.items():
+        if phrase in normalized:
+            return bedrooms
+
+    return None
     match = re.search(r"(\d+)\s*(?:br|bed|bedroom|غرف|غرفة)", _normalize(message))
     if match:
         return int(match.group(1))
     return None
 
+def _detect_max_price(message: str) -> int | None:
+    text = _normalize(message)
+
+    # Arabic digits → English digits
+    arabic_digits = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+    text = text.translate(arabic_digits)
+
+    # Maximum price / under / less than
+    patterns = [
+        r"(?:اقل من|أقل من|تحت|حد اقصى|حد أقصى|بحد اقصى|بحد أقصى)\s*([\d,]+)",
+        r"(?:under|below|max|maximum)\s*([\d,]+)",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return int(match.group(1).replace(",", ""))
+
+    return None
 
 def _unit_matches_query(unit: dict[str, Any], message: str) -> bool:
     normalized = _normalize(message)
@@ -110,27 +198,36 @@ def search_properties(message: str) -> PropertySearchResult:
     property_type = _detect_property_type(message)
     city = _detect_city(message)
     bedrooms = _detect_bedrooms(message)
+    max_price = _detect_max_price(message)
 
     for unit in units:
         if _normalize(unit["id"]) in _normalize(message) or _unit_matches_query(unit, message):
             return PropertySearchResult(units=[unit], matched_unit=unit)
 
     filtered = []
+
     for unit in units:
         if listing_type and unit.get("listing_type") != listing_type:
             continue
+
         if property_type and unit.get("property_type") != property_type:
             continue
+
         if city and unit.get("city", "").lower() != city.lower():
             continue
+
         if bedrooms is not None and unit.get("bedrooms") != bedrooms:
             continue
+
+        if max_price is not None and unit.get("price", 0) > max_price:
+            continue
+
         filtered.append(unit)
 
     if filtered:
         return PropertySearchResult(units=filtered[:5])
 
-    if listing_type or property_type or city:
+    if listing_type or property_type or city or bedrooms is not None or max_price is not None:
         return PropertySearchResult(units=[])
 
     return PropertySearchResult(units=[])

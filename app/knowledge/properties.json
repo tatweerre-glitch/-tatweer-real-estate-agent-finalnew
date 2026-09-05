@@ -16,22 +16,17 @@
       "price_sar": 4500,
       "price_label_en": "SAR 4,500 / month",
       "price_label_ar": "4,500 ر.س / شهرياً",
-      "photos": [
-        "https://picsum.photos/seed/ryd-apt-101-a/800/600",
-        "https://picsum.photos/seed/ryd-apt-101-b/800/600"
-      ],
-      "available": true
-    },
-    {
-      "id": "RYD-VIL-204",
-      "title_en": "4BR Villa for Sale — Al Narjis",
-      "title_ar": "فilla 4 غرف للبيع — النرجس",
-      "listing_type": "sale",
-      "property_type": "villa",
-      "city": "Riyadh",
-      "district_en": "Al Narjis",
-      "district_ar": "النرجس",
-      "project_id": "al-narjis",
+"photos": [
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+],
+"available": true
+},
+{
+    "id": "RYD-VIL-204",
+    "title_en": "4BR Villa for Sale - Al Narjis",
+    "title_ar": "فيلا 4 غرف للبيع - النرجس",      "project_id": "al-narjis",
       "bedrooms": 4,
       "bathrooms": 5,
       "area_sqm": 380,
@@ -39,10 +34,11 @@
       "price_label_en": "SAR 2,850,000",
       "price_label_ar": "2,850,000 ر.س",
       "photos": [
-        "https://picsum.photos/seed/ryd-vil-204-a/800/600",
-        "https://picsum.photos/seed/ryd-vil-204-b/800/600",
-        "https://picsum.photos/seed/ryd-vil-204-c/800/600"
-      ],
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+],
+  
       "available": true
     },
     {
@@ -62,8 +58,8 @@
       "price_label_en": "SAR 7,200 / month",
       "price_label_ar": "7,200 ر.س / شهرياً",
       "photos": [
-        "https://picsum.photos/seed/ryd-dup-305-a/800/600",
-        "https://picsum.photos/seed/ryd-dup-305-b/800/600"
+       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
       ],
       "available": true
     },
@@ -84,8 +80,8 @@
       "price_label_en": "SAR 980,000",
       "price_label_ar": "980,000 ر.س",
       "photos": [
-        "https://picsum.photos/seed/jed-apt-502-a/800/600",
-        "https://picsum.photos/seed/jed-apt-502-b/800/600"
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
+"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
       ],
       "available": true
     },
@@ -106,7 +102,7 @@
       "price_label_en": "SAR 3,800 / month",
       "price_label_ar": "3,800 ر.س / شهرياً",
       "photos": [
-        "https://picsum.photos/seed/jed-apt-601-a/800/600"
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
       ],
       "available": true
     }

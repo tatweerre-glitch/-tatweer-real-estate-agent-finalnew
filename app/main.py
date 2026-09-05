@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -69,19 +70,49 @@ def company_info() -> dict:
     }
 
 
-@app.post("/api/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest) -> ChatResponse:
+@app.post("/api/chat")
+async def chat(request: ChatRequest):
+    message = request.message.strip()
+
+    if not message:
+        raise HTTPException(
+            status_code=400,
+            detail="Message cannot be empty"
+        )
+
+    response = await conversation_manager.handle_message(
+        "web",
+        "web-user",
+        message
+    )
+
+    return JSONResponse(
+        content=ChatResponse(
+            reply=response.reply,
+            language=response.language,
+            source=response.source,
+            photos=response.photos,
+        ).model_dump(),
+        headers={
+            "Content-Type": "application/json; charset=utf-8"
+        },
+    )
+async def chat(request: ChatRequest):
     message = request.message.strip()
     if not message:
         raise HTTPException(status_code=400, detail="Message cannot be empty")
 
     response = await conversation_manager.handle_message("web", "web-user", message)
-    return ChatResponse(
-        reply=response.reply,
-        language=response.language,
-        source=response.source,
-        photos=response.photos,
+    return JSONResponse(
+        content=ChatResponse(
+            reply=response.reply,
+            language=response.language,
+            source=response.source,
+            photos=response.photos,
+        ).model_dump(),
+        headers={"Content-Type": "application/json; charset=utf-8"},
     )
+    
 
 
 @app.get("/")

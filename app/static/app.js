@@ -55,13 +55,16 @@ async function sendMessage(text) {
   inputEl.value = "";
   sendBtn.disabled = true;
 
-  const typingBubble = appendMessage("assistant", "Typing...", "typing");
+  const typingBubble = appendMessage("assistant", "جاري الكتابة...", "typing");
 
   try {
     const response = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, history: history.slice(0, -1) }),
+      body: JSON.stringify({
+        message: message,
+        history: history.slice(0, -1)
+      })
     });
 
     if (!response.ok) {
@@ -69,13 +72,18 @@ async function sendMessage(text) {
     }
 
     const data = await response.json();
+
     typingBubble.remove();
     appendMessage("assistant", data.reply);
     appendPhotos(data.photos);
-    history.push({ role: "assistant", content: data.reply });
+
+    history.push({
+      role: "assistant",
+      content: data.reply
+    });
   } catch (error) {
     typingBubble.textContent =
-      "Sorry, something went wrong. Please try again or contact Tatweer sales.";
+      "عذرًا، حدث خطأ ما. يرجى المحاولة مرة أخرى.";
   } finally {
     sendBtn.disabled = false;
     inputEl.focus();
@@ -96,5 +104,5 @@ document.querySelectorAll("[data-prompt]").forEach((button) => {
 checkHealth();
 appendMessage(
   "assistant",
-  "Hello! I'm the Tatweer Real Estate assistant. Ask me about projects, payment plans, site visits, or after-sales support."
+  "مرحبًا! أنا المساعد العقاري لشركة تطوير العقارية. يمكنني مساعدتك في المشاريع، الوحدات، الأسعار، وخطط السداد."
 );
